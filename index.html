@@ -2,35 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Library</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    h1 { color: #333; }
-    ul { list-style-type: none; padding: 0; }
-    li { margin: 8px 0; }
-    a { color: blue; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    p {
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .library {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .book-card {
+      background-color: #fff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .book-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .book-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .book-author {
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .book-link {
+      display: inline-block;
+      padding: 6px 12px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+    .book-link:hover {
+      background-color: #2980b9;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #777;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
   <h1>Digital Library</h1>
-  <p>Selamat Datang di Perpustakaan Digital</p>
-  <p>Berikut ini adalah Koleksi yang dimiliki:</p>
+  <p>Selamat Datang di Perpustakaan Digital. Berikut koleksi ebook yang tersedia:</p>
 
-  <ul>
-    <li><a href="ebook/bitcoin.pdf" target="_blank">Bitcoin: A Peer-to-Peer Electronic Cash System — Satoshi Nakamoto</a></li>
-    <li><a href="ebook/Bulan.pdf" target="_blank">Bulan — Tere Liye</a></li>
-    <li><a href="ebook/Bumi.pdf" target="_blank">Bumi — Tere Liye</a></li>
-    <li><a href="ebook/I Had That Same Dream Again.pdf" target="_blank">I Had That Same Dream Again — Yoru Sumino</a></li>
-    <li><a href="ebook/I Want to Eat Your Pancreas.pdf" target="_blank">I Want to Eat Your Pancreas — Yoru Sumino</a></li>
-    <li><a href="ebook/Matahari.pdf" target="_blank">Matahari — Tere Liye</a></li>
-    <li><a href="ebook/Rangkuman.pdf" target="_blank">Rangkuman — Alvah Rabbany</a></li>
-    <li><a href="ebook/The Tunnel to Summer, the Exit of Goodbyes.pdf" target="_blank">The Tunnel to Summer, the Exit of Goodbyes — Mei Hachimoku</a></li>
-    <li><a href="ebook/coba.pdf" target="_blank">Coba — Alvah Rabbany</a></li>
-    <li><a href="ebook/Kimi no nawa.pdf" target="_blank">Kimi no nawa — Makoto Shinkai</a></li>
-    <li><a href="ebook/tentang kamu.pdf" target="_blank">tentang kamu — Tere Liye</a></li>
-  </ul>
+  <div class="library">
+    <div class="book-card">
+      <div class="book-title">Bitcoin: A Peer-to-Peer Electronic Cash System</div>
+      <div class="book-author">Satoshi Nakamoto</div>
+      <a class="book-link" href="ebook/bitcoin.pdf" target="_blank">Buka Ebook</a>
+    </div>
 
-  <p><em>Powered by GitHub Pages</em></p>
+    <div class="book-card">
+      <div class="book-title">Bulan</div>
+      <div class="book-author">Tere Liye</div>
+      <a class="book-link" href="ebook/Bulan.pdf" target="_blank">Buka Ebook</a>
+    </div>
+
+    <div class="book-card">
+      <div class="book-title">Bumi</div>
+      <div class="book-author">Tere Liye</div>
+      <a class="book-link" href="ebook/Bumi.pdf" target="_blank">Buka Ebook</a>
+    </div>
+
+    <div class="book-card">
+      <div class="book-title">I Had That Same Dream Again</div>
+      <div class="book-author">Yoru Sumino</div>
+      <a class="book-link" href="ebook/I Had That Same Dream Again.pdf" target="_blank">Buka Ebook</a>
+    </div>
+
+    <div class="book-card">
+      <div class="book-title">I Want to Eat Your Pancreas</div>
+      <div class="book-author">Yoru Sumino</div>
+      <a class="book-link" href="ebook/I Want to Eat Your Pancreas.pdf" target="_blank">Buka Ebook</a>
+    </div>
+
+    <div class="book-card">
+      <div class="book-title">Matahari</div>
+      <div class="book-author">Tere Liye</div>
+      <a class="book-link" href="ebook/Matahari.pdf" target="_blank">Buka Ebook</a>
+    </div>
+
+    <div class="book-card">
+      <div class="book-title">Rangkuman</div>
+      <div class="book-author">Alvah Rabbany</div>
+      <a class="book-link" href="ebook/Rangkuman.pdf" target="_blank">Buka Ebook</a>
+    </div>
+
+    <div class="book-card">
+      <div class="book-title">The Tunnel to Summer, the Exit of Goodbyes</div>
+      <div class="book-author">Mei Hachimoku</div>
+      <a class="book-link" href="ebook/The Tunnel to Summer, the Exit of Goodbyes.pdf" target="_blank">Buka Ebook</a>
+    </div>
+
+    <div class="book-card">
+      <div class="book-title">Coba</div>
+      <div class="book-author">Alvah Rabbany</div>
+      <a class="book-link" href="ebook/coba.pdf" target="_blank">Buka Ebook</a>
+    </div>
+
+    <div class="book-card">
+      <div class="book-title">Kimi no nawa</div>
+      <div class="book-author">Makoto Shinkai</div>
+      <a class="book-link" href="ebook/Kimi no nawa.pdf" target="_blank">Buka Ebook</a>
+    </div>
+
+    <div class="book-card">
+      <div class="book-title">tentang kamu</div>
+      <div class="book-author">Tere Liye</div>
+      <a class="book-link" href="ebook/tentang kamu.pdf" target="_blank">Buka Ebook</a>
+    </div>
+  </div>
+
+  <footer>
+    <em>Powered by GitHub Pages</em>
+  </footer>
 </body>
 </html>
