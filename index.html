@@ -7,8 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
+      background-color: #f0f2f5;
       padding: 20px;
       color: #333;
     }
@@ -16,127 +15,145 @@
       text-align: center;
       color: #2c3e50;
     }
-    p {
-      text-align: center;
-      font-size: 1.1em;
-    }
-    .library {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
       margin-top: 20px;
-    }
-    .book-card {
       background-color: #fff;
-      padding: 15px 20px;
-      border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .book-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
     }
-    .book-title {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    .book-author {
-      font-size: 0.95em;
-      color: #555;
-      margin-bottom: 10px;
-    }
-    .book-link {
-      display: inline-block;
-      padding: 6px 12px;
+    th {
       background-color: #3498db;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #d1e7ff;
+    }
+    a.button {
+      padding: 6px 12px;
+      background-color: #27ae60;
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.2s;
     }
-    .book-link:hover {
-      background-color: #2980b9;
+    a.button:hover {
+      background-color: #1e8449;
     }
     footer {
       text-align: center;
-      margin-top: 30px;
-      color: #777;
+      margin-top: 20px;
       font-size: 0.9em;
+      color: #777;
+    }
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      tr { margin-bottom: 15px; }
+      th { background-color: #3498db; color: #fff; }
+      td {
+        padding-left: 50%;
+        position: relative;
+      }
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Digital Library</h1>
-  <p>Selamat Datang di Perpustakaan Digital. Berikut koleksi ebook yang tersedia:</p>
+  <p style="text-align:center;">Selamat Datang di Perpustakaan Digital</p>
 
-  <div class="library">
-    <div class="book-card">
-      <div class="book-title">Bitcoin: A Peer-to-Peer Electronic Cash System</div>
-      <div class="book-author">Satoshi Nakamoto</div>
-      <a class="book-link" href="ebook/bitcoin.pdf" target="_blank">Buka Ebook</a>
-    </div>
-
-    <div class="book-card">
-      <div class="book-title">Bulan</div>
-      <div class="book-author">Tere Liye</div>
-      <a class="book-link" href="ebook/Bulan.pdf" target="_blank">Buka Ebook</a>
-    </div>
-
-    <div class="book-card">
-      <div class="book-title">Bumi</div>
-      <div class="book-author">Tere Liye</div>
-      <a class="book-link" href="ebook/Bumi.pdf" target="_blank">Buka Ebook</a>
-    </div>
-
-    <div class="book-card">
-      <div class="book-title">I Had That Same Dream Again</div>
-      <div class="book-author">Yoru Sumino</div>
-      <a class="book-link" href="ebook/I Had That Same Dream Again.pdf" target="_blank">Buka Ebook</a>
-    </div>
-
-    <div class="book-card">
-      <div class="book-title">I Want to Eat Your Pancreas</div>
-      <div class="book-author">Yoru Sumino</div>
-      <a class="book-link" href="ebook/I Want to Eat Your Pancreas.pdf" target="_blank">Buka Ebook</a>
-    </div>
-
-    <div class="book-card">
-      <div class="book-title">Matahari</div>
-      <div class="book-author">Tere Liye</div>
-      <a class="book-link" href="ebook/Matahari.pdf" target="_blank">Buka Ebook</a>
-    </div>
-
-    <div class="book-card">
-      <div class="book-title">Rangkuman</div>
-      <div class="book-author">Alvah Rabbany</div>
-      <a class="book-link" href="ebook/Rangkuman.pdf" target="_blank">Buka Ebook</a>
-    </div>
-
-    <div class="book-card">
-      <div class="book-title">The Tunnel to Summer, the Exit of Goodbyes</div>
-      <div class="book-author">Mei Hachimoku</div>
-      <a class="book-link" href="ebook/The Tunnel to Summer, the Exit of Goodbyes.pdf" target="_blank">Buka Ebook</a>
-    </div>
-
-    <div class="book-card">
-      <div class="book-title">Coba</div>
-      <div class="book-author">Alvah Rabbany</div>
-      <a class="book-link" href="ebook/coba.pdf" target="_blank">Buka Ebook</a>
-    </div>
-
-    <div class="book-card">
-      <div class="book-title">Kimi no nawa</div>
-      <div class="book-author">Makoto Shinkai</div>
-      <a class="book-link" href="ebook/Kimi no nawa.pdf" target="_blank">Buka Ebook</a>
-    </div>
-
-    <div class="book-card">
-      <div class="book-title">tentang kamu</div>
-      <div class="book-author">Tere Liye</div>
-      <a class="book-link" href="ebook/tentang kamu.pdf" target="_blank">Buka Ebook</a>
-    </div>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Judul</th>
+        <th>Author</th>
+        <th>Format</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Judul">Bitcoin: A Peer-to-Peer Electronic Cash System</td>
+        <td data-label="Author">Satoshi Nakamoto</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/bitcoin.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+      <tr>
+        <td data-label="Judul">Bulan</td>
+        <td data-label="Author">Tere Liye</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/Bulan.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+      <tr>
+        <td data-label="Judul">Bumi</td>
+        <td data-label="Author">Tere Liye</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/Bumi.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+      <tr>
+        <td data-label="Judul">I Had That Same Dream Again</td>
+        <td data-label="Author">Yoru Sumino</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/I Had That Same Dream Again.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+      <tr>
+        <td data-label="Judul">I Want to Eat Your Pancreas</td>
+        <td data-label="Author">Yoru Sumino</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/I Want to Eat Your Pancreas.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+      <tr>
+        <td data-label="Judul">Matahari</td>
+        <td data-label="Author">Tere Liye</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/Matahari.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+      <tr>
+        <td data-label="Judul">Rangkuman</td>
+        <td data-label="Author">Alvah Rabbany</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/Rangkuman.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+      <tr>
+        <td data-label="Judul">The Tunnel to Summer, the Exit of Goodbyes</td>
+        <td data-label="Author">Mei Hachimoku</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/The Tunnel to Summer, the Exit of Goodbyes.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+      <tr>
+        <td data-label="Judul">Coba</td>
+        <td data-label="Author">Alvah Rabbany</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/coba.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+      <tr>
+        <td data-label="Judul">Kimi no nawa</td>
+        <td data-label="Author">Makoto Shinkai</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/Kimi no nawa.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+      <tr>
+        <td data-label="Judul">tentang kamu</td>
+        <td data-label="Author">Tere Liye</td>
+        <td data-label="Format">PDF</td>
+        <td data-label="Aksi"><a href="ebook/tentang kamu.pdf" class="button" target="_blank">Buka</a></td>
+      </tr>
+    </tbody>
+  </table>
 
   <footer>
     <em>Powered by GitHub Pages</em>
