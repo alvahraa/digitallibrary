@@ -14,7 +14,7 @@ Berikut ini adalah Koleksi yang dimiliki:
 7. [Rangkuman — Alvah Rabbany](Rangkuman.pdf)  
 8. [The Tunnel to Summer, the Exit of Goodbyes — Mei Hachimoku](The%20Tunnel%20to%20Summer%2C%20the%20Exit%20of%20Goodbyes.pdf)  
 9. [Coba — Alvah Rabbany](coba.pdf)  
-10. [kimi no nawa — Makoto Shinkai](kimi%20no%20nawa.pdf)  
+10. [Kimi no nawa — Makoto Shinkai](Kimi%20no%20nawa.pdf)  
 11. [tentang kamu — Tere Liye](tentang%20kamu.pdf)  
 
 ---
